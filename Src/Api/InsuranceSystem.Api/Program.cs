@@ -1,4 +1,6 @@
 
+using InsuranceSystem.Api.Extensions;
+
 namespace InsuranceSystem.Api
 {
     public class Program
@@ -9,10 +11,12 @@ namespace InsuranceSystem.Api
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers(x => x.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.ConfigureSwagger();
+            builder.Services.ConfigureCors();
+            builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
             var app = builder.Build();
 
@@ -31,6 +35,8 @@ namespace InsuranceSystem.Api
             app.MapControllers();
 
             app.Run();
+
+
         }
     }
 }
