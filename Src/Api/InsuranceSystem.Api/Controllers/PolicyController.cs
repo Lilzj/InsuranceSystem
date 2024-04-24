@@ -39,6 +39,7 @@ namespace InsuranceSystem.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetPolicies()
         {
+
             var response = await _mediator.Send(new GetPoliciesQueryRequest());
             return ResolveActionResult(response);
         }

@@ -20,6 +20,7 @@ namespace InsuranceSystem.Controller.UnitTest.Claims
         {
             // Arrange
             var sut = new ClaimsController(_mediator.Object);
+            sut.Token = "Admin";
 
             var expected = new BaseResponse
             {

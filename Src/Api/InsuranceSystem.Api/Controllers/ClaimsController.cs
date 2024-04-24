@@ -14,6 +14,7 @@ namespace InsuranceSystem.Api.Controllers
     public class ClaimsController : BaseController
     {
         private readonly IMediator _mediator;
+        public string Token = string.Empty;
         public ClaimsController(IMediator mediator)
         {
             _mediator = mediator;
@@ -27,6 +28,8 @@ namespace InsuranceSystem.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetClaims()
         {
+            if (string.IsNullOrWhiteSpace(Token) || (!string.IsNullOrWhiteSpace(Token) && (Token != "Admin")))
+                return Unauthorized();
             var response = await _mediator.Send(new GetClaimsQueryRequest());
             return ResolveActionResult(response);
         }
