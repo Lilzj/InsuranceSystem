@@ -11,5 +11,7 @@ namespace InsuranceSystem.Application.Persistence
         IAdminRepository Admin { get; }
         IClaimsRepository Claims { get; }
         IPolicyRepository Policy { get; }
+
+        Task SaveAsync();
     }
 }

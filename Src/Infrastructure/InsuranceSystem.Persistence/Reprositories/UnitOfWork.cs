@@ -25,14 +25,14 @@ namespace InsuranceSystem.Persistence.Reprositories
             _ctx = ctx;
         }
 
-        public IAdminRepository Admin => _admins ??= new AdminRepository();
+        public IAdminRepository Admin => _admins ??= new AdminRepository(_ctx);
 
-        public IClaimsRepository Claims => _claims ??= new ClaimsRepository();
+        public IClaimsRepository Claims => _claims ??= new ClaimsRepository(_ctx);
 
-        public IPolicyRepository Policy => _policies ??= new PolicyRepository();
+        public IPolicyRepository Policy => _policies ??= new PolicyRepository(_ctx);
 
 
-        public async Task Save() => await _ctx.SaveChangesAsync();
+        public async Task SaveAsync() => await _ctx.SaveChangesAsync();
         public void Dispose()
         {
             _ctx.Dispose();

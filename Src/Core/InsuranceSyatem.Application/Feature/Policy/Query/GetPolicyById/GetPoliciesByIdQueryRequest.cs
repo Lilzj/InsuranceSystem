@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.Feature.Policy.Query.GetPolicyById
 {
-    public record GetPoliciesByIdQueryRequest(GetPolicyRequestDto GetPolicy) : IQueryRequest<PolicyResponseDto>
+    public record GetPoliciesByIdQueryRequest(GetPolicyRequestDto GetPolicy) : IQueryRequest<BaseResponse>
     {
     }
 }

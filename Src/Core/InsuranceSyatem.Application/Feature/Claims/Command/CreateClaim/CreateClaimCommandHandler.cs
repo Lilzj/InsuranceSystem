@@ -1,9 +1,16 @@
-﻿using InsuranceSyatem.Application.Abstractions;
+﻿using AutoMapper;
+using InsuranceSyatem.Application.Abstractions;
 using InsuranceSyatem.Application.Dtos.Request.Clams;
 using InsuranceSyatem.Application.Dtos.Response;
+using InsuranceSystem.Application.Dtos.Response;
+using InsuranceSystem.Application.Dtos.Response.Claims;
+using InsuranceSystem.Application.Helper;
+using InsuranceSystem.Application.Persistence;
+using InsuranceSystem.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,9 +18,31 @@ namespace InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim
 {
     public class CreateClaimCommandHandler : ICommandHandler<CreateClaimCommandRequest, BaseResponse>
     {
-        public Task<BaseResponse> Handle(CreateClaimCommandRequest request, CancellationToken cancellationToken)
+        private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
+        public CreateClaimCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
+        public async Task<BaseResponse> Handle(CreateClaimCommandRequest request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var claim = _mapper.Map<Claim>(request.ClaimRequest);
+                _unitOfWork.Claims.AddClaim(claim);
+
+                await _unitOfWork.SaveAsync();
+
+                var result = _mapper.Map<ClaimsResponseDto>(claim);
+                result.TotalAmountToClaim = Utilities.GetTotalAmout(result.Expenses.Select(_ => _.Amount));
+                return ExecuteResponse<ClaimsResponseDto>.Response((int)HttpStatusCode.Created, true, $"Claim successfully submitted, you can track the status of your claim using {result?.Id} or {result?.NationalID}", result);
+            }
+            catch (Exception)
+            {
+                //log error
+                return ExecuteResponse<ClaimsResponseDto>.Response((int)HttpStatusCode.UnprocessableEntity, false, $"Error occus while submitting your claims, try again", null);
+            }
         }
     }
 }

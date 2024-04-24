@@ -1,4 +1,5 @@
-﻿using InsuranceSystem.Domain;
+﻿using InsuranceSyatem.Application.Dtos.Request.Clams;
+using InsuranceSystem.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace InsuranceSystem.Application.Dtos.Response.Claims
     {
         public string Id { get; set; }
         public string NationalID { get; set; }
-        public List<Expense> Expenses { get; set; }
+        public List<ExpenseDto> Expenses { get; set; }
         public string ClaimsStatus { get; set; }
         public decimal TotalAmountToClaim { get; set; }
     }

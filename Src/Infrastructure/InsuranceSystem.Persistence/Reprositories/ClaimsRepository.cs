@@ -26,7 +26,7 @@ namespace InsuranceSystem.Persistence.Reprositories
 
         public async Task<Claim> GetClaimById(string id)
         {
-            return await IncludeAsync(_ => _.Id == id, "Expense");
+            return await IncludeAsync(_ => _.Id == id || _.NationalID == id, "Expense");
         }
 
         public async Task<IEnumerable<Claim>> GetClaimsByNationalId(string Id)

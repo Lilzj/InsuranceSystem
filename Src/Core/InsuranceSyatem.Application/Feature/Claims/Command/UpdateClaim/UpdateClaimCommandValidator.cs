@@ -2,6 +2,7 @@
 using InsuranceSystem.Application.Dtos.Request.Policy;
 using InsuranceSystem.Domain;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace InsuranceSystem.Application.Feature.Claims.Command.UpdateClaim
                 .NotEmpty()
                 .NotNull()
                 .WithMessage("Claim status is required")
+                .NotEqual("Submitted")
+                .WithMessage("Claim status provided is not a valid status, status should be: Approve, Decline, InReview")
                 .IsInEnum()
                 .WithMessage("Claim status provided is not a valid status, status should be: Approve, Decline, InReview");
         }

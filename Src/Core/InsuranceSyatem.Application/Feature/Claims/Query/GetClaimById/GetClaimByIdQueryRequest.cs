@@ -1,4 +1,5 @@
 ﻿using InsuranceSyatem.Application.Abstractions;
+using InsuranceSyatem.Application.Dtos.Response;
 using InsuranceSystem.Application.Dtos.Request.Claims;
 using InsuranceSystem.Application.Dtos.Response.Claims;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.Feature.Claims.Query.GetClaimById
 {
-    public record GetClaimByIdQueryRequest(GetClaimRequestDto GetClaim) : IQueryRequest<ClaimsResponseDto>
+    public record GetClaimByIdQueryRequest(GetClaimRequestDto GetClaim) : IQueryRequest<BaseResponse>
     {
     }
 }

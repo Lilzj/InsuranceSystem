@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InsuranceSystem.Domain
+namespace InsuranceSystem.Domain.Enum
 {
     public enum ExpenseType
     {
