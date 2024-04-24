@@ -1,5 +1,6 @@
 ﻿using InsuranceSystem.Application.Persistence;
 using InsuranceSystem.Persistence.DBContext;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace InsuranceSystem.Persistence.Reprositories
 {
     public class UnitOfWork : IUnitOfWork
     {
+        private readonly InsuranceDbContext _ctx;
 
         private IAdminRepository _admins;
 
@@ -18,8 +20,9 @@ namespace InsuranceSystem.Persistence.Reprositories
         private IPolicyRepository _policies;
 
 
-        public UnitOfWork()
+        public UnitOfWork(InsuranceDbContext ctx)
         {
+            _ctx = ctx;
         }
 
         public IAdminRepository Admin => _admins ??= new AdminRepository();
@@ -27,5 +30,12 @@ namespace InsuranceSystem.Persistence.Reprositories
         public IClaimsRepository Claims => _claims ??= new ClaimsRepository();
 
         public IPolicyRepository Policy => _policies ??= new PolicyRepository();
+
+
+        public async Task Save() => await _ctx.SaveChangesAsync();
+        public void Dispose()
+        {
+            _ctx.Dispose();
+        }
     }
 }
