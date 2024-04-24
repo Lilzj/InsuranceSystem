@@ -17,5 +17,12 @@ namespace InsuranceSystem.Domain
         public DateTime DOB { get; set; }
 
         public string PolicyNumber { get; set; }
+
+
+        public Policy()
+        {
+            Random rdm = new Random();
+            PolicyNumber = "POL" + rdm.Next(0000, 9999).ToString();
+        }
     }
 }

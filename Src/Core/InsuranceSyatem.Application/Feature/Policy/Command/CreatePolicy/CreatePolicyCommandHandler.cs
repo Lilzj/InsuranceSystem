@@ -36,7 +36,7 @@ namespace InsuranceSystem.Application.Feature.Policy.Command.CreatePolicy
                 await _unitOfWork.SaveAsync();
 
                 var result = _mapper.Map<PolicyResponseDto>(policy);
-                return ExecuteResponse<PolicyResponseDto>.Response((int)HttpStatusCode.Created, true, $"Policy created successfully", result);
+                return ExecuteResponse<PolicyResponseDto>.Response((int)HttpStatusCode.Created, true, $"Policy created successfully with policy number {result.PolicyNumber}", result);
             }
             catch (Exception)
             {
