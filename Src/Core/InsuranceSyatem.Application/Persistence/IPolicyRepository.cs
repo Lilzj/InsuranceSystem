@@ -1,11 +1,4 @@
-﻿using InsuranceSystem.Application.Dtos.Request.Policy;
-using InsuranceSystem.Application.Dtos.Response.Policy;
-using InsuranceSystem.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using InsuranceSystem.Domain;
 
 namespace InsuranceSystem.Application.Persistence
 {

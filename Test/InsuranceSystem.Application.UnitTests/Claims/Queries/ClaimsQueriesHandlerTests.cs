@@ -1,15 +1,9 @@
 ﻿using AutoMapper;
 using InsuranceSystem.Application.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Moq;
 using InsuranceSystem.Application.UnitTests.Mocks;
 using InsuranceSystem.Application.Profiles;
 using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
-using System.Threading;
 using Shouldly;
 using InsuranceSyatem.Application.Dtos.Response;
 

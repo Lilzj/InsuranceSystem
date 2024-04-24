@@ -3,16 +3,8 @@ using InsuranceSystem.Api.Controllers;
 using InsuranceSystem.Application.Dtos.Response.Claims;
 using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
 using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceSystem.Controller.UnitTest.Claims
 {

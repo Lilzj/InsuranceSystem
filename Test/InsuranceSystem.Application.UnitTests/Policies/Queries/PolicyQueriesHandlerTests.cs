@@ -1,18 +1,11 @@
 ﻿using AutoMapper;
 using InsuranceSyatem.Application.Dtos.Response;
-using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
 using InsuranceSystem.Application.Feature.Policy.Query.GetPolicies;
-using InsuranceSystem.Application.Feature.Policy.Query.GetPolicyById;
 using InsuranceSystem.Application.Persistence;
 using InsuranceSystem.Application.Profiles;
 using InsuranceSystem.Application.UnitTests.Mocks;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.UnitTests.Policies.Queries
 {

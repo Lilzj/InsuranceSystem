@@ -1,10 +1,7 @@
-﻿using InsuranceSyatem.Application.Dtos.Request.Clams;
-using InsuranceSyatem.Application.Dtos.Response;
-using InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim;
+﻿using InsuranceSyatem.Application.Dtos.Response;
 using InsuranceSystem.Application.Dtos.Request.Policy;
 using InsuranceSystem.Application.Feature.Claims.Command.UpdateClaim;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsuranceSystem.Api.Controllers

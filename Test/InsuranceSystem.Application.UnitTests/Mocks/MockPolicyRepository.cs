@@ -1,12 +1,6 @@
 ﻿using InsuranceSystem.Application.Persistence;
-using InsuranceSystem.Domain.Enum;
 using InsuranceSystem.Domain;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.UnitTests.Mocks
 {

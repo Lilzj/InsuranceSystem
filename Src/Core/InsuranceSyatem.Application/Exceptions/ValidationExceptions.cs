@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InsuranceSystem.Application.Exceptions
+﻿namespace InsuranceSystem.Application.Exceptions
 {
     public class ValidationExceptions : ApplicationException
     {

@@ -1,13 +1,7 @@
-﻿using InsuranceSyatem.Application.Dtos.Request.Clams;
-using InsuranceSystem.Application.Persistence;
+﻿using InsuranceSystem.Application.Persistence;
 using InsuranceSystem.Domain;
 using InsuranceSystem.Domain.Enum;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.UnitTests.Mocks
 {

@@ -1,11 +1,4 @@
 ﻿using FluentValidation;
-using InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace InsuranceSystem.Application.Feature.Policy.Command.CreatePolicy
 {

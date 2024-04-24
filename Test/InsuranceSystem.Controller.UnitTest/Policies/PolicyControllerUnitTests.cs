@@ -1,16 +1,10 @@
 ﻿using InsuranceSyatem.Application.Dtos.Response;
 using InsuranceSystem.Api.Controllers;
-using InsuranceSystem.Application.Dtos.Response.Claims;
 using InsuranceSystem.Application.Dtos.Response.Policy;
 using InsuranceSystem.Application.Feature.Policy.Query.GetPolicies;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceSystem.Controller.UnitTest.Policies
 {

@@ -1,16 +1,10 @@
 ﻿using AutoMapper;
 using InsuranceSyatem.Application.Abstractions;
 using InsuranceSyatem.Application.Dtos.Response;
-using InsuranceSystem.Application.Dtos.Request.Policy;
 using InsuranceSystem.Application.Dtos.Response.Claims;
 using InsuranceSystem.Application.Dtos.Response;
 using InsuranceSystem.Application.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using InsuranceSystem.Application.Helper;
 using InsuranceSystem.Domain.Enum;
 

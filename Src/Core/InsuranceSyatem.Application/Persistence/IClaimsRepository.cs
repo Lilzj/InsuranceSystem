@@ -1,12 +1,4 @@
-﻿using InsuranceSyatem.Application.Dtos.Request.Clams;
-using InsuranceSystem.Application.Dtos.Request.Claims;
-using InsuranceSystem.Application.Dtos.Response.Claims;
-using InsuranceSystem.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using InsuranceSystem.Domain;
 
 namespace InsuranceSystem.Application.Persistence
 {

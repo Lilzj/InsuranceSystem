@@ -1,18 +1,9 @@
 ﻿using AutoMapper;
 using InsuranceSyatem.Application.Abstractions;
 using InsuranceSyatem.Application.Dtos.Response;
-using InsuranceSystem.Application.Dtos.Response.Claims;
 using InsuranceSystem.Application.Dtos.Response;
-using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
-using InsuranceSystem.Application.Helper;
 using InsuranceSystem.Application.Persistence;
-using InsuranceSystem.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using InsuranceSystem.Application.Dtos.Response.Policy;
 
 namespace InsuranceSystem.Application.Feature.Policy.Query.GetPolicies

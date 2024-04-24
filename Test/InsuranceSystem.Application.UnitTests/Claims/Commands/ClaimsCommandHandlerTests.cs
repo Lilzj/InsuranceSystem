@@ -2,19 +2,11 @@
 using InsuranceSyatem.Application.Dtos.Request.Clams;
 using InsuranceSyatem.Application.Dtos.Response;
 using InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim;
-using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
 using InsuranceSystem.Application.Persistence;
 using InsuranceSystem.Application.Profiles;
 using InsuranceSystem.Application.UnitTests.Mocks;
-using InsuranceSystem.Domain.Enum;
-using InsuranceSystem.Domain;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.UnitTests.Claims.Commands
 {

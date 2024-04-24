@@ -2,16 +2,10 @@
 using InsuranceSyatem.Application.Abstractions;
 using InsuranceSyatem.Application.Dtos.Response;
 using InsuranceSystem.Application.Dtos.Response;
-using InsuranceSystem.Application.Helper;
 using InsuranceSystem.Application.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using InsuranceSystem.Application.Dtos.Response.Policy;
-using PolicyModel =  InsuranceSystem.Domain.Policy;
+using PolicyModel = InsuranceSystem.Domain.Policy;
 
 namespace InsuranceSystem.Application.Feature.Policy.Command.CreatePolicy
 {
