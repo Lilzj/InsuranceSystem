@@ -1,5 +1,7 @@
 
 using InsuranceSystem.Api.Extensions;
+using InsuranceSystem.Application;
+using InsuranceSystem.Persistence;
 
 namespace InsuranceSystem.Api
 {
@@ -17,6 +19,8 @@ namespace InsuranceSystem.Api
             builder.Services.ConfigureSwagger();
             builder.Services.ConfigureCors();
             builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(Program).Assembly));
+            builder.Services.ConfigureApplicationService();
+            builder.Services.ConfigurePersistenceService(builder.Configuration);
 
             var app = builder.Build();
 

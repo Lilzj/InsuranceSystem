@@ -7,19 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{7097E5BB-9C8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{82CAD432-7151-46D6-98AE-57D3D685294F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceSystem.Api", "Src\Api\InsuranceSystem.Api\InsuranceSystem.Api.csproj", "{210689D3-4612-458E-948F-F3C1810946EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceSystem.Api", "Src\Api\InsuranceSystem.Api\InsuranceSystem.Api.csproj", "{210689D3-4612-458E-948F-F3C1810946EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{87D33B69-EE5B-4852-B089-6114058F892B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceSyatem.Application", "Src\Core\InsuranceSyatem.Application\InsuranceSyatem.Application.csproj", "{1A0ADD0C-BA6B-4E3D-98F3-99567FB41EEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceSystem.Application", "Src\Core\InsuranceSyatem.Application\InsuranceSystem.Application.csproj", "{1A0ADD0C-BA6B-4E3D-98F3-99567FB41EEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceSystem.Domain", "Src\Core\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj", "{2B7B55D3-277D-4791-B226-60515D562552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceSystem.Domain", "Src\Core\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj", "{2B7B55D3-277D-4791-B226-60515D562552}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{11345CB0-B972-4059-89F8-DEAA3A1D61A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceSystem.Infrastructure", "Src\Infrastructure\InsuranceSystem.Infrastructure\InsuranceSystem.Infrastructure.csproj", "{0A700BF5-911A-4827-BA80-CEAEB97EFC51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceSystem.Infrastructure", "Src\Infrastructure\InsuranceSystem.Infrastructure\InsuranceSystem.Infrastructure.csproj", "{0A700BF5-911A-4827-BA80-CEAEB97EFC51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceSystem.Persistence", "Src\Infrastructure\InsuranceSystem.Persistence\InsuranceSystem.Persistence.csproj", "{E3494BC0-9179-46A5-A2F5-8F7289F4865D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceSystem.Persistence", "Src\Infrastructure\InsuranceSystem.Persistence\InsuranceSystem.Persistence.csproj", "{E3494BC0-9179-46A5-A2F5-8F7289F4865D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{834DBC94-4486-4698-878A-37A78C7BC21A}"
 EndProject

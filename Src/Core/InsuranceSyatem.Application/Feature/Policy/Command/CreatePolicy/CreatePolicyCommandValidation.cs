@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.Feature.Policy.Command.CreatePolicy
 {
-    internal class CreatePolicyCommandValidation
+    public class CreatePolicyCommandValidation
     {
     }
 }

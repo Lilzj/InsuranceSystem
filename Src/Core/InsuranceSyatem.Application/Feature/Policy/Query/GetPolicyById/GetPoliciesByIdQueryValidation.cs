@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.Feature.Policy.Query.GetPolicyById
 {
-    internal class GetPoliciesByIdQueryValidation
+    public class GetPoliciesByIdQueryValidation
     {
     }
 }

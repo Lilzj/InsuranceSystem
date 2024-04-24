@@ -5,7 +5,7 @@ namespace InsuranceSystem.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AdminController : ControllerBase
+    public class AdminController : BaseController
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceSystem.Domain
 {
-    public class PolicyHolder : BaseEntity
+    public class Policy : BaseEntity
     {
         public string NationalID { get; set; }
 
