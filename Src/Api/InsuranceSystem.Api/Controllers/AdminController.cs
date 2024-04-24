@@ -11,6 +11,7 @@ namespace InsuranceSystem.Api.Controllers
     public class AdminController : BaseController
     {
         private readonly IMediator _mediator;
+        public string Token = string.Empty;
         public AdminController(IMediator mediator)
         {
             _mediator = mediator;
@@ -24,6 +25,10 @@ namespace InsuranceSystem.Api.Controllers
         [HttpPut("Claim")]
         public async Task<IActionResult> UpdateClaim(UpdateClaimsRequestDto request)
         {
+            //Get the token from the request header: Token = Request.Headers["Token"]
+
+            if (string.IsNullOrWhiteSpace(Token) || (!string.IsNullOrWhiteSpace(Token) && (Token != "Admin")))
+                return Unauthorized();
             var response = await _mediator.Send(new UpdateClaimCommandRequest(request));
             return ResolveActionResult(response);
         }
