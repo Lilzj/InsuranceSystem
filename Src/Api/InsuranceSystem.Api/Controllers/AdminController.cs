@@ -25,7 +25,7 @@ namespace InsuranceSystem.Api.Controllers
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status500InternalServerError)]
         [HttpPut("Claim")]
-        public async Task<IActionResult> AddClaim(UpdateClaimsRequestDto request)
+        public async Task<IActionResult> UpdateClaim(UpdateClaimsRequestDto request)
         {
             var response = await _mediator.Send(new UpdateClaimCommandRequest(request));
             return ResolveActionResult(response);

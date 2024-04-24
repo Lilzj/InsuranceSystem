@@ -16,6 +16,7 @@ namespace InsuranceSystem.Api
             builder.Services.AddControllers(x => x.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            //builder.Services.AddSwaggerGen();
             builder.Services.ConfigureSwagger();
             builder.Services.ConfigureCors();
             builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(Program).Assembly));

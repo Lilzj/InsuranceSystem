@@ -29,10 +29,10 @@ namespace InsuranceSystem.Api.Controllers
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status500InternalServerError)]
-        [HttpGet]
-        public async Task<IActionResult> GetPolicy()
+        [HttpGet("id")]
+        public async Task<IActionResult> GetPolicy(string id)
         {
-            var response = await _mediator.Send(new GetPoliciesQueryRequest());
+            var response = await _mediator.Send(new GetPoliciesByIdQueryRequest(id)); 
             return ResolveActionResult(response);
         }
 
@@ -41,10 +41,10 @@ namespace InsuranceSystem.Api.Controllers
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status500InternalServerError)]
-        [HttpGet("id")]
-        public async Task<IActionResult> GetPolicies(string id)
+        [HttpGet]
+        public async Task<IActionResult> GetPolicies()
         {
-            var response = await _mediator.Send(new GetPoliciesByIdQueryRequest(id));
+            var response = await _mediator.Send(new GetPoliciesQueryRequest());
             return ResolveActionResult(response);
         }
 

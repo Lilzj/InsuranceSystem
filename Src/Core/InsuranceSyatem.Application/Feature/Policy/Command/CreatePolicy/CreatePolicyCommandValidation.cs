@@ -34,13 +34,17 @@ namespace InsuranceSystem.Application.Feature.Policy.Command.CreatePolicy
                 .NotNull()
                 .WithMessage("Date of birth is required")
                 .Must(BeAValidDate)
-                .WithMessage("Enter a valid date");
+                .WithMessage("You must be 18 and above to be a policy holder");
         }
 
-        private bool BeAValidDate(string value)
+        private bool BeAValidDate(DateTime value)
         {
-            DateTime date;
-            return DateTime.TryParse(value, out date);
+            var currentYear = DateTime.Now.Year;
+            var dateOfBirth = Convert.ToDateTime(value);
+            int age = currentYear - dateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+                age--;
+            return age > 18;
         }
     }
 }

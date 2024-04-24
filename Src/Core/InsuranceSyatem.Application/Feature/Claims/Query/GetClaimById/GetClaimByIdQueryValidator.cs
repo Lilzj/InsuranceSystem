@@ -12,7 +12,7 @@ namespace InsuranceSystem.Application.Feature.Claims.Query.GetClaimById
     {
         public GetClaimByIdQueryValidator()
         {
-            RuleFor(_ => _.GetClaim.Id)
+            RuleFor(_ => _.Id)
                 .NotEmpty()
                 .NotNull()
                 .WithMessage("Claim Id is required");

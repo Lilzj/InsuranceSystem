@@ -23,7 +23,7 @@ namespace InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim
                     _.RuleFor(_ => _.ExpenseType)
                      .IsInEnum()
                      .WithMessage("Expense type provided is not a valid expense, expenses should be: (Procedures, Prescriptions");
-                    _.RuleFor(_ => _.ExpenseDescription)
+                    _.RuleFor(_ => _.Description)
                     .NotNull()
                     .NotEmpty()
                     .WithMessage("Expense description is needed");

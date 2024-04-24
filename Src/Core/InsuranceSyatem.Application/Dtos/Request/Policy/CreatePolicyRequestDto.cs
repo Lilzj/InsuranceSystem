@@ -14,7 +14,7 @@ namespace InsuranceSystem.Application.Dtos.Request.Policy
 
         public string Surname { get; set; }
 
-        public string DOB { get; set; }
+        public DateTime DOB { get; set; }
 
         public string PolicyNumber { get; set; }
     }
