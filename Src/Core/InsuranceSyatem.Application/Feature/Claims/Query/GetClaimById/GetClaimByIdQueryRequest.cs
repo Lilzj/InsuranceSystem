@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceSystem.Application.Feature.Claims.Query.GetClaimById
 {
-    public record GetClaimByIdQueryRequest(GetClaimRequestDto GetClaim) : IQueryRequest<BaseResponse>
+    public record GetClaimByIdQueryRequest(string Id) : IQueryRequest<BaseResponse>
     {
     }
 }

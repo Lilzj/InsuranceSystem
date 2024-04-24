@@ -29,8 +29,8 @@ namespace InsuranceSystem.Application.Feature.Claims.Query.GetClaimById
         {
             try
             {
-                var claim = await _unitOfWork.Claims.GetClaimById(request.GetClaim.Id);
-                if (claim == null) return ExecuteResponse<ClaimsResponseDto>.Response((int)HttpStatusCode.NotFound, false, $"Claim with id {request.GetClaim.Id} does not exist", null);
+                var claim = await _unitOfWork.Claims.GetClaimById(request.Id);
+                if (claim == null) return ExecuteResponse<ClaimsResponseDto>.Response((int)HttpStatusCode.NotFound, false, $"Claim with id {request.Id} does not exist", null);
 
                 var claimToReturn = _mapper.Map<ClaimsResponseDto>(claim);
                 claimToReturn.TotalAmountToClaim = Utilities.GetTotalAmout(claimToReturn.Expenses.Select(_ => _.Amount));

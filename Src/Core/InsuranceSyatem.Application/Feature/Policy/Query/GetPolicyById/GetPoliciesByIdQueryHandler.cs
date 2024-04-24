@@ -31,8 +31,8 @@ namespace InsuranceSystem.Application.Feature.Policy.Query.GetPolicyById
         {
             try
             {
-                var policy = await _unitOfWork.Policy.GetPolicyById(request.GetPolicy.Id);
-                if (policy == null) return ExecuteResponse<PolicyResponseDto>.Response((int)HttpStatusCode.NotFound, false, $"Policy with id {request.GetPolicy.Id} does not exist", null);
+                var policy = await _unitOfWork.Policy.GetPolicyById(request.Id);
+                if (policy == null) return ExecuteResponse<PolicyResponseDto>.Response((int)HttpStatusCode.NotFound, false, $"Policy with id {request.Id} does not exist", null);
 
                 var policyToReturn = _mapper.Map<PolicyResponseDto>(policy);
 
