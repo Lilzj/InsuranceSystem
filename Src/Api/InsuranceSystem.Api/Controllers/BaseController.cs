@@ -1,7 +1,5 @@
 ﻿using InsuranceSyatem.Application.Dtos.Response;
 using MediatR;
-using Microsoft.AspNetCore.Hosting.Server;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 

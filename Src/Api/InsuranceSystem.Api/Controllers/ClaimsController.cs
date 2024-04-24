@@ -4,7 +4,6 @@ using InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim;
 using InsuranceSystem.Application.Feature.Claims.Query.GetClaimById;
 using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsuranceSystem.Api.Controllers

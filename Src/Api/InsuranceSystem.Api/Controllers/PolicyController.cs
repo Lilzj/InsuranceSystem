@@ -1,14 +1,9 @@
-﻿using InsuranceSyatem.Application.Dtos.Request.Clams;
-using InsuranceSyatem.Application.Dtos.Response;
-using InsuranceSyatem.Application.Feature.Claims.Command.CreateClaim;
+﻿using InsuranceSyatem.Application.Dtos.Response;
 using InsuranceSystem.Application.Dtos.Request.Policy;
-using InsuranceSystem.Application.Feature.Claims.Query.GetClaimById;
-using InsuranceSystem.Application.Feature.Claims.Query.GetClaims;
 using InsuranceSystem.Application.Feature.Policy.Command.CreatePolicy;
 using InsuranceSystem.Application.Feature.Policy.Query.GetPolicies;
 using InsuranceSystem.Application.Feature.Policy.Query.GetPolicyById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsuranceSystem.Api.Controllers
